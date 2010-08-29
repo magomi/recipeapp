@@ -1,10 +1,4 @@
-Das Verzeichnis "recipes" enthält (Koch-) Rezepte. Rezepte werden im RecipeML-Format gespeichert (siehe http://www.formatdata.com/recipeml/).
+recipeapp is a small application for playing around with cooking recipes. The recipes are stored in the CookML formate
+in its own git repository (git@github.com:magomi/recipebase.git or http://github.com/magomi/recipebase).
 
-Für Fragen oder Anregungen bitte via magomi+github@gmail.com Kontakt aufnehmen.
-
-==================================
-
-The recipes directory contains all cooking recipes. Recipes are stored using RecipeML (checkout http://www.formatdata.com/recipeml/).
-
-For questions or recomendations please contact me at magomi+github@gmail.com
-
+Please feel free to send questions or recomendations to magomi+github@gmail.com or contact me at github (http://github.com/magomi).
