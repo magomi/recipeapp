@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cook:cookml xmlns:cook="http://codefromhell.org/cookml"><cook:recipe><cook:part><cook:ingredient qty="1.0" unit="l" item="Wasser"/><cook:ingredient qty="1.0" unit="l" item="Wasser"/></cook:part><cook:preparation><cook:step>Das Wasser zum Kochen bringen.</cook:step><cook:step>Eier ins kochende Wasser geben.</cook:step><cook:step>Eier nach 6 Minuten herausnehmen und unter kaltem Wasser abschrecken.</cook:step></cook:preparation></cook:recipe></cook:cookml>
