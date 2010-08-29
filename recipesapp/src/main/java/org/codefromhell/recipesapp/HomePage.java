@@ -9,7 +9,12 @@ import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextArea;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
+import org.apache.wicket.markup.repeater.Item;
+import org.apache.wicket.markup.repeater.RefreshingView;
+import org.apache.wicket.markup.repeater.util.ModelIteratorAdapter;
 import org.apache.wicket.model.CompoundPropertyModel;
+import org.apache.wicket.model.IModel;
+import org.apache.wicket.model.Model;
 import org.apache.wicket.model.PropertyModel;
 import org.codefromhell.cookml.CookmlDocument;
 import org.codefromhell.cookml.IngredientDocument;
@@ -24,9 +29,13 @@ import org.odlabs.wiquery.ui.tabs.Tabs;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
- * @author Richard Wilkinson - richard.wilkinson@jweekend.com
+ * The applications start page.
+ *
+ * @author Marco Grunert (magomi@gmail.com)
  *
  */
 public class HomePage extends WebPage {
@@ -44,6 +53,13 @@ public class HomePage extends WebPage {
     private String s2;
     private String s3;
 
+    private ArrayList<String> recipes;
+
+    /**
+     * Constructor.
+     *
+     * @param parameters Additional url parameters that has been provided to the page.
+     */
     public HomePage(final PageParameters parameters) {
 
         Form form = new Form("recipeForm", new CompoundPropertyModel<HomePage>(this));
@@ -90,6 +106,29 @@ public class HomePage extends WebPage {
                 }
             }
         });
+
+        recipes = new ArrayList<String>();
+        recipes.add("Hefeklöße");
+        recipes.add("Gekochte Eier");
+
+        RefreshingView<String> recipesRV = new RefreshingView<String>("recipesList") {
+            @Override
+            protected Iterator<IModel<String>> getItemModels() {
+                return new ModelIteratorAdapter<String>(recipes.iterator()) {
+                    @Override
+                    protected IModel<String> model(String object) {
+                        return new CompoundPropertyModel<String>(object);
+                    }
+                };
+            }
+
+            @Override
+            protected void populateItem(Item<String> stringItem) {
+                stringItem.add(new Label("recipe", Model.of(stringItem.getModelObject())));
+            }
+        };
+        
+        form.add(recipesRV);
 
         add(form);
     }

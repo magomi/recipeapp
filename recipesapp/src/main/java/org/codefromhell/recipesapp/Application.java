@@ -5,26 +5,25 @@ import org.apache.wicket.protocol.http.WebApplication;
 import org.odlabs.wiquery.core.commons.WiQueryInstantiationListener;
 
 /**
- * Application object for your web application. If you want to run this application without deploying, run the Start class.
- * 
- * @see wicket.myproject.Start#main(String[])
- * 
- * @author Richard Wilkinson - richard.wilkinson@jweekend.com
+ * Application object for the webapp.
  *
+ * @author Marco Grunert (magomi@gmail.com)
  */
 public class Application extends WebApplication
 {    
 	/**
-	 * Constructor
+	 * Constructor.
 	 */
 	public Application()
 	{
 		addComponentInstantiationListener(new WiQueryInstantiationListener());
 	}
 
-	/* (non-Javadoc)
-	 * @see org.apache.wicket.Application#getHomePage()
-	 */
+    /**
+     * Returns the class of the page that should be loaded on first access to the application.
+     *
+     * @return The class of the applications start page.
+     */
 	@Override
 	public Class<? extends Page> getHomePage() {
 		return HomePage.class;
