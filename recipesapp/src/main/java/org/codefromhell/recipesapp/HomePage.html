@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<head>
+<title>create a recipe</title>
+</head>
+<body>
+    <form wicket:id="recipeForm">
+        Bezeichnung: <input type="text" wicket:id="rBezeichnung" value="Gekochte Eier"/>
+        <br />
+        <br />
+        Zutat 1: <input type="text" wicket:id="z1Menge" value="1"/> <input type="text" wicket:id="z1Einheit" value="l"/> <input type="text" wicket:id="z1Bezeichnung" value="Wasser"/>
+        <br />
+        Zutat 2: <input type="text" wicket:id="z2Menge" value="3"/> <input type="text" wicket:id="z2Einheit" value="Stk."/> <input type="text" wicket:id="z2Bezeichnung" value="Eier"/>
+        <br />
+        <br />
+        Schritt 1: <textarea cols="35" rows="4" wicket:id="s1">Das Wasser zum Kochen bringen.</textarea>
+        <br />
+        Schritt 2: <textarea cols="35" rows="4" wicket:id="s2">Eier ins kochende Wasser geben.</textarea>
+        <br />
+        Schritt 3: <textarea cols="35" rows="4" wicket:id="s3">Eier nach 6 Minuten herausnehmen und unter kaltem Wasser abschrecken.</textarea>
+        <br />
+        <br />
+        <input type="button" wicket:id="submit" value="Speichern" />
+
+    </form>
+
+</body>
+</html>
+
