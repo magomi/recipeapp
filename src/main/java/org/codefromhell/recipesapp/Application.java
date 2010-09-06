@@ -1,7 +1,9 @@
 package org.codefromhell.recipesapp;
 
 import org.apache.wicket.Page;
+import org.apache.wicket.protocol.http.HttpSessionStore;
 import org.apache.wicket.protocol.http.WebApplication;
+import org.apache.wicket.session.ISessionStore;
 import org.odlabs.wiquery.core.commons.WiQueryInstantiationListener;
 
 /**
@@ -29,4 +31,15 @@ public class Application extends WebApplication
 		return HomePage.class;
 	}
 
+    @Override
+	protected void init() {
+		super.init();
+
+		this.getResourceSettings().setResourcePollFrequency(null);
+	}
+
+    @Override
+	protected ISessionStore newSessionStore() {	
+		return new HttpSessionStore(this);
+	}
 }
