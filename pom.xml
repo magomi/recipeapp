@@ -151,7 +151,6 @@
                     <sourceGenerationDirectory>src/main/java</sourceGenerationDirectory>
                     <sourceSchemas>
                         <sourceSchema>cookml.xsd</sourceSchema>
-                        <sourceSchema>reml.xsd</sourceSchema>
                     </sourceSchemas>
 				</configuration>
 			</plugin>
