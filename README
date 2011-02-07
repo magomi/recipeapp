@@ -1,4 +1,7 @@
-recipeapp is a small application for playing around with cooking recipes. The recipes are stored in the CookML formate
-in its own git repository (git@github.com:magomi/recipebase.git or http://github.com/magomi/recipebase).
+recipeapp is a small application for playing around with cooking recipes. The recipes are stored using JSON. There is a own git repository for the recipes: (git@github.com:magomi/recipebase.git or http://github.com/magomi/recipebase - check the recipes/json directory).
+
+Currently all available recipes can be selected from a drop down list and will be displayed at the page.
+
+The application is available at the following url: http://recipesforgeeks.appspot.com/
 
 Please feel free to send questions or recomendations to magomi+github@gmail.com or contact me at github (http://github.com/magomi).

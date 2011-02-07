@@ -11,13 +11,13 @@ import org.odlabs.wiquery.core.commons.WiQueryInstantiationListener;
  *
  * @author Marco Grunert (magomi@gmail.com)
  */
-public class Application extends WebApplication
-{    
+public class Application extends WebApplication {
+    private static final long serialVersionUID = 9L;
+
 	/**
 	 * Constructor.
 	 */
-	public Application()
-	{
+	public Application() {
 		addComponentInstantiationListener(new WiQueryInstantiationListener());
 	}
 
@@ -28,7 +28,7 @@ public class Application extends WebApplication
      */
 	@Override
 	public Class<? extends Page> getHomePage() {
-		return HomePage.class;
+		return RecipesPage.class;
 	}
 
     @Override
